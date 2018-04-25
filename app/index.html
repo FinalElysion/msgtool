@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>My Msg App</title>
+	<!--
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>-->
+	<script type="text/javascript" src="lib/RongIMLib-2.3.0.min.js"></script>
+	<script type="text/javascript" src="lib/RongEmoji-2.2.6.min.js"></script>
+	<script type="text/javascript" src="dist/main.js"></script>
+</head>
+<body>
+
+	<div class="card bg-light msg-container">
+
+		<div class="card-header">我的聊天<span class="target-user"></span></div>
+			<div class="card-body d-flex">
+			<div class="msg-list" id="msg-list"></div>
+			<div class="msg-content">
+				<div class="msg-result" id="talkResult">
+					
+				</div>
+				<div class="button-bar">
+					<div class="emoji-container" id="emoji-container">
+						<div class="arrow-bubble"></div>
+						<div class="chatbox-emoji-panel" id="chatbox-emoji-panel"></div>
+					</div>
+					<img class="chatbox-emoji-btn" src="./assets/face.jpg" id="chatbox-emoji-btn"/>
+				</div>
+				<div class="msg-input" id="edit-msg-contant">
+					<textarea class="form-control" id="talkMsg" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="button-content">
+	    <select class="form-control" id="user-id">
+	      <option>888888</option>
+	      <option>12345</option>
+	    </select>
+	    <button type="button" class="btn btn-success" id="connect-btn">连接</button>
+	</div>
+
+</body>
+</html>

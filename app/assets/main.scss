@@ -1,0 +1,206 @@
+$bubbleColor:#cbedf5;
+$borderColor:#d2d3d4;
+$emojiColor:#d3d3d3;
+
+.msg-container{
+	box-shadow: 5px 5px 13px #888888;
+	background-color: white!important;
+	width: 600px;
+	height: 450px;
+	margin: 0 auto;
+    margin-top: 60px;
+	.target-user{
+		position: absolute;
+	    right: 176px;
+	}
+	.card-body{
+		padding: 0px;
+	}
+	.msg-list{
+		width:210px;
+	    border-color: $borderColor;
+	    border-right-style: solid;
+	    border-right-width: 1px;
+	    overflow-y: auto;
+    	overflow-x: hidden;
+    	.selected-item{
+			background-color: #e0e8f1;
+		} 
+	    .user {
+	    	cursor: pointer;
+	    	padding-top:10px;
+    	    white-space: nowrap;
+    	    position: relative;
+    	    img{
+	    	    width: 40px;
+    			position: absolute;
+    			left: 10px;
+			    top: 13px;
+			    border-radius: 20px;
+			
+    	    }
+	    	.name{
+	    		margin-left: 60px;
+	    	}
+	    	span{
+	    		text-align: right;
+			    position: absolute;
+			    right: 1px;
+			    font-size: 11px;
+    			padding-top: 3px;
+	    	}
+	    	.last-msg{
+	    		margin-left: 60px;
+		    	color:gray;
+		    	font-style: italic;
+		    	overflow: hidden;
+		    	text-overflow: ellipsis;
+
+	    	}
+	    }
+	}
+	
+	.msg-content{
+		flex:1;
+		//height: 68vh;
+	   
+		.msg-result{
+			overflow: auto !important;
+	    	position: relative;
+			height: 288px;
+			background-color: white;
+			.arrow {
+			    width: 0;
+			    height: 0;
+			    font-size: 0;
+			    border: solid 10px #000;
+			    position: absolute;
+			    top: 3px;
+			    z-index: -10;
+			}
+
+			.arrow-left {
+			    border-color: white $bubbleColor white white;
+			    left: 2px;
+			}
+
+			.arrow-right {
+			    border-color: white white white $bubbleColor;
+			    right: -12px;
+			}
+
+			.talk-bubble-container {
+			    z-index: 107;
+			    border: none;
+			    padding: 0 5px 0 5px;
+			    position: relative;
+			    word-break: break-word;
+			    max-width: 200px;
+			    margin-bottom: 10px;
+			    margin-top: 10px;
+			}
+
+			.talk-left-bubble-container {
+			    display: inline-block;
+    			padding-left: 18px;
+			}
+
+			.talk-right-bubble-container {
+			    right: -148px;
+			    text-align: right;
+			}
+
+			.talk-user-me {
+			    position: absolute;
+		        right: -30px;
+			    top: 0px;
+			}
+
+			.talk-user-service {
+		        display: inline-block;
+    			padding-left: 10px;
+			}
+			.talk-bubble-container div {
+			    background-color: $bubbleColor;
+			    display: inline-block;
+			    border-radius: 10px;
+			    min-width: 32px;
+			    padding: 3px 8px;
+			}
+		}
+		
+		.button-bar {
+	        z-index: 999;
+	        background-color: white;
+	        height: 30px;
+	        border-top-style: solid;
+	        border-top-width: 1px;
+	        border-color: $borderColor;	        
+	        .emoji-container{
+	        	position: absolute;
+	        	visibility: hidden;
+		        top: 156px;
+		        z-index: 9999;
+		        margin-left: 5px;
+	            width: 378px;
+	           
+	        	.chatbox-emoji-panel{
+	        		height: 165px;	    
+			        overflow: auto;
+			        background: $emojiColor; 
+			        padding: 5px 8px;
+			        border-radius: 10px;
+				}
+				.arrow-bubble {
+	    			width: 0;
+	    		    height: 0;
+	    		    font-size: 0;
+	    		    border: solid 10px #000;
+	    		    position: absolute;
+	    		    border-color: $emojiColor unquote('#ffffff00') unquote('#ffffff00')  unquote('#ffffff00');
+	    		    top: 162px;
+				    z-index: -2;
+				    left: 3px;
+	    		}
+	        }
+	        .chatbox-emoji-btn {
+	        	visibility: hidden;
+		        width: 26px;
+		        border-radius: 20px;
+	            padding-left: 5px;
+		    }
+	    }
+	    
+		.msg-input{
+			padding: 2px;
+		    textarea {
+		    	padding: 2px;
+		        border: none;
+		        resize: none;
+		        padding-left: 0px;
+		    }
+		}
+	}
+}
+
+.button-content{
+
+	margin:0 auto!important;
+	margin-top: 10px !important;
+	width: 270px;
+	select{
+		margin-top: 5px !important;
+		width: 200px !important ;
+		display: inline-block !important;
+	}
+	button{
+	    margin-bottom: 4px !important;
+	    margin-left: 3px;
+	}
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+}
+
